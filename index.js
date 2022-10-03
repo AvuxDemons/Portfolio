@@ -9,8 +9,12 @@ app.set("view engine", "ejs")
 app.set("json spaces", 1);
 app.use('/static', express.static('./static'));
 
+const project = require('./static/assets/project.json');
+
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', {
+    project: project
+  })
 });
 
 

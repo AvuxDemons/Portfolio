@@ -90,100 +90,32 @@
             <div class="project-wrapper">
                 <h2 class="section-title dark-blue-text">Projects</h2>
 
+                <% project.map((project) => { %>
                 <div class="row">
                     <div class="project-wrapper__text">
-                        <h3 class="project-wrapper__text-title">MagerNulis</h3>
+                        <h3 class="project-wrapper__text-title"><%= project.project %></h3>
                         <p class="project-wrapper__text-info">
-                            MagerNulis is an automatic writing website for those of you lying down who are lazy to write
-                            on paper.
+                            <%= project.description %>
                         </p>
                         <div class="project-wrapper__text-btns">
-                            <a href="https://magernulis.ga" target="_blank" rel="noopener noreferrer"
+                            <a href="<%= project.live %>" target="_blank" rel="noopener noreferrer"
                                 class="cta-btn cta-btn--projects">See Live</a>
-                            <a href="https://github.com/avuxdemons/" target="_blank" rel="noopener noreferrer"
+                            <a href="<%= project.github %>" target="_blank" rel="noopener noreferrer"
                                 class="cta-btn cta-btn--projects">Github</a>
                         </div>
                     </div>
 
                     <div class="project-wrapper__image">
-                        <a href="https://magernulis.ga" target="_blank" rel="noopener noreferrer">
+                        <a href="<%= project.live %>" target="_blank" rel="noopener noreferrer">
                             <div class="thumbnail rounded">
-                                <img src="../static/assets/magernulis.jpg" class="img-fluid" alt="MagerNulis">
+                                <img src="<%= project.thumbnail %>" class="img-fluid" alt="MagerNulis">
                             </div>
                         </a>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="project-wrapper__text">
-                        <h3 class="project-wrapper__text-title">API</h3>
-                        <p class="project-wrapper__text-info">
-                            Cool API for you with alot of endpoints which you can use.
-                        </p>
-                        <div class="project-wrapper__text-btns">
-                            <a href="https://avux.xyz" target="_blank" rel="noopener noreferrer"
-                                class="cta-btn cta-btn--projects">See Live</a>
-                            <a href="https://github.com/avuxdemons/API" target="_blank" rel="noopener noreferrer"
-                                class="cta-btn cta-btn--projects">Github</a>
-                        </div>
-                    </div>
-
-                    <div class="project-wrapper__image">
-                        <a href="https://avux.xyz" target="_blank" rel="noopener noreferrer">
-                            <div class="thumbnail rounded">
-                                <img src="../static/assets/soon.jpg" class="img-fluid" alt="api">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="project-wrapper__text">
-                        <h3 class="project-wrapper__text-title">Ariane</h3>
-                        <p class="project-wrapper__text-info">
-                            Discord bot with alot of commands, built using discord.js with 24/7 Online.
-                        </p>
-                        <div class="project-wrapper__text-btns">
-                            <a href="https://avux.xyz" target="_blank" rel="noopener noreferrer"
-                                class="cta-btn cta-btn--projects">See Live</a>
-                            <a href="https://github.com/avuxdemons/" target="_blank" rel="noopener noreferrer"
-                                class="cta-btn cta-btn--projects">Github</a>
-                        </div>
-                    </div>
-
-                    <div class="project-wrapper__image">
-                        <a href="https://avux.xyz" target="_blank" rel="noopener noreferrer">
-                            <div class="thumbnail rounded">
-                                <img src="../static/assets/soon.jpg" class="img-fluid" alt="vibe">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="project-wrapper__text">
-                        <h3 class="project-wrapper__text-title">FiveM Server API</h3>
-                        <p class="project-wrapper__text-info">
-                            NPM API for getting information about FiveM Server with latest update without any error.
-                        </p>
-                        <div class="project-wrapper__text-btns">
-                            <a href="https://www.npmjs.com/package/fivem-server-api" target="_blank"
-                                rel="noopener noreferrer" class="cta-btn cta-btn--projects">See Live</a>
-                            <a href="https://github.com/avuxdemons/fivem-server-api" target="_blank" rel="noopener noreferrer"
-                                class="cta-btn cta-btn--projects">Github</a>
-                        </div>
-                    </div>
-
-                    <div class="project-wrapper__image">
-                        <a href="https://www.npmjs.com/package/fivem-server-api" target="_blank"
-                            rel="noopener noreferrer">
-                            <div class="thumbnail rounded">
-                                <img src="../static/assets/fsa.jpg" class="img-fluid" alt="FiveM-Server-Api">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
+                <% }) %>
+                
             </div>
         </div>
     </section>
