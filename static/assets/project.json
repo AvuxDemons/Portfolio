@@ -1,6 +1,6 @@
 [
     { 
-        "project": "KomikSan",
+        "project": "KOMIKSAN",
         "live": "https://komiksan.ml",
         "github": "",
         "thumbnail": "./static/assets/soon.jpg", 
@@ -19,6 +19,20 @@
         "github": "https://github.com/AvuxDemons/fivem-server-api",
         "thumbnail": "./static/assets/fsa.jpg", 
         "description": "NPM API for getting information about FiveM Server with latest update without any error."
+    },
+    { 
+        "project": "FiveM Server IP",
+        "live": "https://github.com/AvuxDemons/FiveMServerIP",
+        "github": "https://github.com/AvuxDemons/FiveMServerIP",
+        "thumbnail": "./static/assets/soon.jpg", 
+        "description": "Get FiveM Server IP & Port By Using The CFX.re Vanity URL"
+    },
+    { 
+        "project": "NontonTIPI",
+        "live": "http://gg.gg/tvkutv",
+        "github": "https://github.com/AvuxDemons/NontonTIPI",
+        "thumbnail": "./static/assets/soon.jpg", 
+        "description": "Nonton TV Channels Dari Seluruh Dunia Kapanpun , Dimanapun Tanpa Bayar"
     },
     { 
         "project": "Avux API",

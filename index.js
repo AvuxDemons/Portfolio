@@ -1,5 +1,4 @@
 const express = require('express');
-const status = require('statuses');
 const axios = require('axios');
 const fs = require('fs');
 
@@ -11,9 +10,11 @@ app.use('/static', express.static('./static'));
 
 const project = require('./static/assets/project.json');
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+  //let repo = await axios.get('https://api.github.com/users/avuxdemons/repos')
+
   res.render('index', {
-    project: project
+    project
   })
 });
 
