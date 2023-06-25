@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif
+}
+
+html,
+body,
+#root {
+    width: 100%;
 }
 
 html {
@@ -148,6 +155,7 @@ screen and (-ms-high-contrast: none) {
     .cta-btn--hero {
         color: #9e9e9e
     }
+
     .cta-btn--hero:hover {
         color: #fff
     }
@@ -237,6 +245,7 @@ screen and (-ms-high-contrast: none) {
     .cta-btn--projects {
         color: #9e9e9e
     }
+
     .cta-btn--projects:hover {
         color: #fff
     }
@@ -328,15 +337,8 @@ screen and (-ms-high-contrast: none) {
 
 .social-links a:hover {
     -webkit-transform: translateY(-2px);
-    transform: translateY(-2px)
-}
-
-.social-links a:hover .fa-twitter {
-    color: #00acee
-}
-
-.social-links a:hover .fa-linkedin {
-    color: #4875b4
+    transform: translateY(-2px);
+    color: #929292;
 }
 
 .back-to-top i {
@@ -488,7 +490,8 @@ section .row span {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    flex-direction: column;
 }
 
 #about .about-wrapper__image img {
@@ -571,6 +574,7 @@ section .row span {
 }
 
 @media (max-width: 37.5em) {
+
     #contact .contact-wrapper__text,
     #contact .contact-wrapper a {
         font-size: 2rem
@@ -725,9 +729,11 @@ section .row span {
     0% {
         opacity: 0
     }
+
     50% {
         opacity: 0
     }
+
     100% {
         opacity: 1
     }
@@ -737,9 +743,11 @@ section .row span {
     0% {
         opacity: 0
     }
+
     50% {
         opacity: 0
     }
+
     100% {
         opacity: 1
     }
@@ -749,12 +757,15 @@ section .row span {
     0% {
         opacity: 0
     }
+
     30% {
         opacity: 1
     }
+
     60% {
         opacity: 1
     }
+
     100% {
         opacity: 0;
         top: 90%
@@ -765,12 +776,15 @@ section .row span {
     0% {
         opacity: 0
     }
+
     30% {
         opacity: 1
     }
+
     60% {
         opacity: 1
     }
+
     100% {
         opacity: 0;
         top: 90%
@@ -899,8 +913,12 @@ section .row span {
 }
 
 @media (max-width: 37.5em) {
-    #about .about-wrapper__cta .break-hidden:before {  
+    #about .about-wrapper__cta .break-hidden:before {
         content: "\A \A";
         white-space: pre;
     }
 }
+
+.typed-cursor:not(:first-child) {
+    display: none !important;
+  }
