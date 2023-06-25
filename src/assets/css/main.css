@@ -502,6 +502,10 @@ section .row span {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)
 }
 
+#about .about-wrapper__image p {
+    padding-top: 10px;
+}
+
 @media (max-width: 75em) {
     #about .about-wrapper__image {
         height: 100%
@@ -918,7 +922,3 @@ section .row span {
         white-space: pre;
     }
 }
-
-.typed-cursor:not(:first-child) {
-    display: none !important;
-  }

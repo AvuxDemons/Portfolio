@@ -7,11 +7,28 @@ function App() {
 
   useEffect(() => {
     const loadScripts = async () => {
-      // Load vanilla-tilt script
-      const vanillaTiltScript = document.createElement('script');
-      vanillaTiltScript.src = '/javascript/vanilla-tilt.min.js';
-      document.body.appendChild(vanillaTiltScript);
-
+      // Check if scripts are already loaded
+      const vanillaTiltLoaded = !!document.querySelector('script[src="/javascript/vanilla-tilt.min.js"]');
+      const typedLoaded = !!document.querySelector('script[src="./javascript/typed.js"]');
+  
+      if (!vanillaTiltLoaded) {
+        // Load vanilla-tilt script
+        const vanillaTiltScript = document.createElement('script');
+        vanillaTiltScript.src = '/javascript/vanilla-tilt.min.js';
+        document.body.appendChild(vanillaTiltScript);
+      }
+  
+      if (!typedLoaded) {
+        // Load typed script
+        const typedScript = document.createElement('script');
+        typedScript.src = './javascript/typed.js';
+        document.body.appendChild(typedScript);
+  
+        await new Promise((resolve) => {
+          typedScript.onload = resolve;
+        });
+      }
+  
       // Code to be executed after scripts are loaded
       var dob = new Date("01/26/2004");
       var month_diff = Date.now() - dob.getTime();
@@ -19,32 +36,26 @@ function App() {
       var year = age_dt.getUTCFullYear();
       var age = Math.abs(year - 1970);
       document.getElementById("age").innerHTML = age;
-
-      // Load typed script
-      const typedScript = document.createElement('script');
-      typedScript.src = './javascript/typed.js';
-      document.body.appendChild(typedScript);
-
-      await new Promise((resolve) => {
-        typedScript.onload = resolve;
-      });
-
-      new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        typeSpeed: 150,
-        loop: true,
-        strings: [
-          'I like to code some projects.',
-          'I like to watch anime.',
-          'I like to read manga.',
-          'I like to play games.',
-          'I like to learn new things.',
-        ],
-      });
+  
+      if (!typedLoaded) {
+        new Typed('#typed', {
+          stringsElement: '#typed-strings',
+          typeSpeed: 150,
+          loop: true,
+          strings: [
+            'I like to code some projects.',
+            'I like to watch anime.',
+            'I like to read manga.',
+            'I like to play games.',
+            'I like to learn new things.',
+          ],
+        });
+      }
     };
-
+  
     loadScripts();
   }, []);
+  
 
 
   return (
@@ -67,7 +78,7 @@ function App() {
           <div className="row about-wrapper">
             <div className="about-wrapper__image">
               <img className="img-fluid rounded-img" src="https://s.gravatar.com/avatar/ac61dced29eb701e7ef36be4bc944ee1?s=2048" alt="profile" />
-              <p>console.log("Weeb")</p>
+              <p>console.log("<b>I'm a Weeb</b>")</p>
             </div>
             <div className="about-wrapper__info">
               <p className="about-wrapper__info-text">
@@ -81,11 +92,11 @@ function App() {
                 find some of my projects down below.
               </p>
               <span className="about-wrapper__cta">
-                <a href="https://github.com/avuxdemons" className="cta-btn cta-btn--resume" target="_blank" rel="noopener noreferrer">View Github</a>
+                <a href="https://github.com/avuxdemons" className="cta-btn cta-btn--resume" target="_blank" rel="noopener noreferrer">Github</a>
                 <span className="break-hidden">
                   <span className="about-language">
-                    {languages.map((language) => (
-                      <img className="image-language" src={language.logo} alt={language.language} />
+                    {languages.map((language, idx) => (
+                      <img className="image-language" src={language.logo} alt={language.language} key={idx} />
                     ))}
                   </span>
                 </span>
