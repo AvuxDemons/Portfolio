@@ -514,7 +514,7 @@ section .row span {
 
 @media (max-width: 48em) {
     #about .about-wrapper__image {
-        padding-bottom: 4rem
+        padding-bottom: 2rem
     }
 }
 

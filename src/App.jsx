@@ -78,7 +78,7 @@ function App() {
           <div className="row about-wrapper">
             <div className="about-wrapper__image">
               <img className="img-fluid rounded-img" src="https://s.gravatar.com/avatar/ac61dced29eb701e7ef36be4bc944ee1?s=2048" alt="profile" />
-              <p>console.log("<b>I'm a Weeb</b>")</p>
+              <p><em>"Pretend Everything Is Fine"</em></p>
             </div>
             <div className="about-wrapper__info">
               <p className="about-wrapper__info-text">
