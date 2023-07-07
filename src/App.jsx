@@ -1,3 +1,4 @@
+import Live2D from './components/Live2D';
 import Hero from './components/Hero';
 import About from './components/About';
 import Project from './components/Project';
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <>
+      <Live2D />
       <Hero />
       <About />
       <Project />
