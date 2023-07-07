@@ -34,7 +34,8 @@ if (screen.width >= 768) {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
 			//apiPath: "https://live2d.fghrsh.net/api/",
-			cdnPath: "https://fastly.jsdelivr.net/gh/avuxdemons/portfolio/",
+			// cdnPath: "https://fastly.jsdelivr.net/gh/avuxdemons/portfolio/",
+			cdnPath: "https://raw.githubusercontent.com/AvuxDemons/Portfolio/main/",
 			tools: ["switch-model", "switch-texture", "quit"]
 			// tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
 		});
