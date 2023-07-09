@@ -15,11 +15,11 @@ const Live2D = () => {
                     position: "right",
                     width: 300,
                     height: 400,
-                    hOffset: -80,
+                    hOffset: -50,
                     vOffset: -80
                 },
                 mobile: {
-                    show: true,
+                    show: false,
                     scale: 0.8
                 },
                 dialog: {
@@ -37,9 +37,9 @@ const Live2D = () => {
 
         document.body.appendChild(script);
 
-        return () => {
-            document.body.removeChild(script);
-        };
+        // return () => {
+        //     document.body.removeChild(script);
+        // };
     }, []);
 
     return <div id="L2Dwidget" />;
