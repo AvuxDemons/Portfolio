@@ -47,7 +47,7 @@ function About() {
                                 <span className="break-hidden">
                                     <span className="about-language">
                                         {languages.map((language, idx) => (
-                                            <img className="image-language" src={language.logo} alt={language.language} key={idx} />
+                                            <img className="image-language" src={language.logo} alt={language.language} key={idx} title={language.language + ' : ' + language.knowledge + "%"} />
                                         ))}
                                     </span>
                                 </span>

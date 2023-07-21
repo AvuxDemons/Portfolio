@@ -2,49 +2,64 @@
     "languages": [
         {
             "language": "NodeJS",
-            "logo": "/images/node.png"
+            "logo": "/images/node.png",
+            "knowledge": 95
         },
         {
             "language": "JavaScript",
-            "logo": "/images/js.png"
+            "logo": "/images/js.png",
+            "knowledge": 95
         },
         {
             "language": "HTML",
-            "logo": "/images/html.png"
+            "logo": "/images/html.png",
+            "knowledge": 100
         },
         {
             "language": "CSS",
-            "logo": "/images/css.png"
+            "logo": "/images/css.png",
+            "knowledge": 95
         },
         {
             "language": "C++",
-            "logo": "/images/cpp.png"
+            "logo": "/images/cpp.png",
+            "knowledge": 80
         },
         {
             "language": "GO",
-            "logo": "/images/go.png"
+            "logo": "/images/go.png",
+            "knowledge": 70
         },
         {
             "language": "LUA",
-            "logo": "/images/lua.png"
+            "logo": "/images/lua.png",
+            "knowledge": 60
         },
         {
             "language": "Python",
-            "logo": "/images/py.png"
+            "logo": "/images/py.png",
+            "knowledge": 50
         }
     ],
     "projects": [
         {
+            "title": "SaweriaOverlay",
+            "live": "",
+            "github": "https://github.com/AvuxDemons/SaweriaOverlay",
+            "thumbnail": "./images/soon.jpg",
+            "description": "Customize Saweria Donation Alert Overlay"
+        },
+        {
             "title": "KOMIKSAN",
             "live": "https://komiksan.ml",
-            "github": "",
+            "github": "https://github.com/AvuxDemons/Komiksan",
             "thumbnail": "./images/soon.jpg",
             "description": "Website for reading manga , manhwa & manhua without any ads"
         },
         {
             "title": "MagerNulis",
-            "live": "https://magernulis.ga",
-            "github": "",
+            "live": "",
+            "github": "https://github.com/AvuxDemons/MagerNulis",
             "thumbnail": "./images/magernulis.jpg",
             "description": "MagerNulis is an automatic writing website for those of you lying down who are lazy to write on paper."
         },
@@ -57,22 +72,22 @@
         },
         {
             "title": "FiveM Server IP",
-            "live": "https://github.com/AvuxDemons/FiveMServerIP",
+            "live": "",
             "github": "https://github.com/AvuxDemons/FiveMServerIP",
             "thumbnail": "./images/soon.jpg",
             "description": "Get FiveM Server IP & Port By Using The CFX.re Vanity URL"
         },
         {
             "title": "NontonTIPI",
-            "live": "http://gg.gg/tvkutv",
+            "live": "",
             "github": "https://github.com/AvuxDemons/NontonTIPI",
             "thumbnail": "./images/soon.jpg",
             "description": "Nonton TV Channels Dari Seluruh Dunia Kapanpun , Dimanapun Tanpa Bayar"
         },
         {
             "title": "Avux API",
-            "live": "https://api.avux.xyz",
-            "github": "",
+            "live": "https://api.avux.cc",
+            "github": "https://github.com/AvuxDemons/API",
             "thumbnail": "./images/soon.jpg",
             "description": "Cool API for you with alot of endpoints which you can use."
         }

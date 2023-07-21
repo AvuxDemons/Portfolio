@@ -15,21 +15,25 @@ function Project() {
                                     <h3 className="project-wrapper__text-title">{project.title}</h3>
                                     <p className="project-wrapper__text-info">{project.description}</p>
                                     <div className="project-wrapper__text-btns">
-                                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="cta-btn cta-btn--projects">
-                                            See Live
-                                        </a>
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="cta-btn cta-btn--projects">
-                                            Github
-                                        </a>
+                                        {project.live &&
+                                            <a href={project.live} target="_blank" rel="noopener noreferrer" className="cta-btn cta-btn--projects">
+                                                See Live
+                                            </a>
+                                        }
+                                        {project.github &&
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="cta-btn cta-btn--projects">
+                                                Github
+                                            </a>
+                                        }
                                     </div>
                                 </div>
 
                                 <div className="project-wrapper__image">
-                                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                                        <div className="thumbnail rounded">
-                                            <img src={project.thumbnail} className="img-fluid" alt={project.title} />
-                                        </div>
-                                    </a>
+                                        <a href={project.live || '#'} target={project.live ? '_blank' : '_self'} rel="noopener noreferrer">
+                                            <div className="thumbnail rounded">
+                                                <img src={project.thumbnail} className="img-fluid" alt={project.title} />
+                                            </div>
+                                        </a>
                                 </div>
                             </div>
                         ))}
